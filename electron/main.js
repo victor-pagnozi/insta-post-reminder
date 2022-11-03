@@ -1,21 +1,10 @@
 const { app, BrowserWindow } = require("electron");
 
-const createWindow = () => {
-  const win = new BrowserWindow({
-    width: 250,
-    height: 310,
-    frame: false,
-    resizable: false,
-    fullscreenable: false,
-  });
+function App() {
+  const win = require('./createWindow.js')
+}
 
-  win.loadURL("https://google.com")
-  // win.loadFile("index.html");
-};
-
-app.whenReady().then(() => {
-  createWindow();
-});
+app.whenReady().then(App);
 
 app.on("window-all-closed", () => {
   if (process.platform !== "darwin") app.quit();
