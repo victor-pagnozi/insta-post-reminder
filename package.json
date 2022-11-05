@@ -5,7 +5,8 @@
   "main": "electron/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "electron ."
+    "start": "electron .",
+    "build": "npx electron-packager . --icon assets/instagram.icns --out=packages"
   },
   "repository": {
     "type": "git",

@@ -5,11 +5,14 @@ function createWindow() {
     width: 250,
     height: 310,
     frame: false,
+    show: false,
     resizable: false,
     fullscreenable: false,
   });
 
   win.loadFile("index.html");
+
+  win.on("blur", () => win.hide());
 
   return win;
 }
